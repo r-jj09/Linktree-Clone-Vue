@@ -1,79 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import "tailwindcss";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    /* Typography */
+    --font-primary: "Pixelify Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-size-base: 14px;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    /* Colors */
+    --bg: #0b0b10;
+    --text: #f6f6f6;
+    --muted: rgba(246, 246, 246, 0.7);
+    --accent: #ff0836;
+    --accent-2: #7c3aed; /* optional second accent */
+    --card: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Spacing + radius */
+    --radius: 16px;
+    --radius-sm: 12px;
+    --space-1: 6px;
+    --space-2: 10px;
+    --space-3: 16px;
+    --space-4: 24px;
+
+    /* Shadow */
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    /* Selection */
+    --selection-bg: var(--accent);
+    --selection-text: #ffffff;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
+html, body {
+    height: 100%;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    background: var(--bg);
+    color: var(--text);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+::selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.social-link{
+    background-color: #270b3d;
+    color: white;
+    padding: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #9e91b9;
+    transition: all 0.3s ease-in-out;
 }
 
-.card {
-  padding: 2em;
+.icon{
+    color: var(--accent);
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.social-link:hover {
+    background-color: black;
+    border-color: #ff0836;
+    color: white;
+
+    .icon {
+        color: white !important;
+    }
 }

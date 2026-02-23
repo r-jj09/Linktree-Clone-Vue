@@ -1,0 +1,10 @@
+[
+  { "id": "instagram", "url": "https://www.instagram.com/r_jj.09/", "visibleIn": ["hu", "en"] },
+  { "id": "threads", "url": "https://www.threads.com/@r_jj.09", "visibleIn": ["hu", "en"] },
+  { "id": "tiktok", "url": "https://www.tiktok.com/@r_jj09", "visibleIn": ["hu", "en"] },
+  { "id": "github", "url": "https://github.com/r-jj09", "visibleIn": ["hu", "en"] },
+  { "id": "linkedin", "url": "https://www.linkedin.com/in/rekahajdu1109/", "visibleIn": ["hu", "en"] },
+  { "id": "goodreads", "url": "https://goodreads.com/r_jj09", "visibleIn": ["hu", "en"] },
+  { "id": "snitt", "url": "https://snitt.hu/tagok/rejj", "visibleIn": ["hu"] },
+  { "id": "moly", "url": "https://moly.hu/tagok/rejj", "visibleIn": ["hu"] }
+]
