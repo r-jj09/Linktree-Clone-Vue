@@ -1,5 +1,5 @@
 export default {
-    title: "Réka | Linkek 💜",
+    title: "Réka | Linkek ❤️",
     bio: "Szia! 👋 Réka vagyok, 24 éves, feltörekvő frontend fejlesztő. Ezeken az oldalakon találsz meg! 💜",
     social: {
         instagram: "Instagram",
@@ -10,5 +10,6 @@ export default {
         goodreads: "Goodreads",
         snitt: "Snitt.hu",
         moly: "Moly.hu",
+        portfolio: "Portfólió",
     }
 };

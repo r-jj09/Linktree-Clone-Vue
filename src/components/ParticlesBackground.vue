@@ -14,7 +14,7 @@ const options = {
 
   particles: {
     number: {
-      value: 180,
+      value: 380,
       density: {
         enable: true,
         area: 800, // particles.js: value_area
@@ -86,8 +86,8 @@ const options = {
       attract: {
         enable: false,
         rotate: {
-          x: 600, // particles.js: rotateX
-          y: 1200, // particles.js: rotateY
+          x: 100, // particles.js: rotateX
+          y: 100, // particles.js: rotateY
         },
       },
     },
@@ -108,24 +108,24 @@ const options = {
     },
     modes: {
       grab: {
-        distance: 400,
+        distance: 100,
         links: {
           opacity: 1, // particles.js: line_linked.opacity
         },
       },
       bubble: {
-        distance: 400,
+        distance: 800,
         size: 40,
         duration: 2,
         opacity: 8,
         speed: 3,
       },
       repulse: {
-        distance: 200,
+        distance: 120,
         duration: 0.4,
       },
       push: {
-        quantity: 4, // particles.js: particles_nb
+        quantity: 1, // particles.js: particles_nb
       },
       remove: {
         quantity: 2, // particles.js: particles_nb

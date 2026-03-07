@@ -2,7 +2,7 @@ import { computed, ref } from "vue";
 import en from "../locales/en";
 import hu from "../locales/hu";
 
-const lang = ref(localStorage.getItem("lang") || "hu");
+const lang = ref(localStorage.getItem("lang") || "en");
 
 const messages = computed(() => (lang.value === "hu" ? hu : en));
 

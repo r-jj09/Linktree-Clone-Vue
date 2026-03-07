@@ -6,6 +6,7 @@ import linkedin from "../assets/icons/linkedin.svg";
 import goodreads from "../assets/icons/goodreads.svg";
 import snitt from "../assets/icons/clapperboard.svg";
 import moly from "../assets/icons/book.svg";
+import portfolio from "../assets/icons/sparkle.svg";
 
 
 export const socialIcons = {
@@ -16,5 +17,6 @@ export const socialIcons = {
     linkedin,
     goodreads,
     snitt,
-    moly
+    moly,
+    portfolio
 };

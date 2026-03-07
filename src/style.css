@@ -31,7 +31,6 @@
     --selection-text: #ffffff;
 }
 
-
 html, body {
     height: 100%;
 }
@@ -53,9 +52,7 @@ body {
 .social-link{
     background-color: #270b3d;
     color: white;
-    padding: 16px;
     margin-bottom: 20px;
-    width: 100%;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
@@ -63,17 +60,13 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.icon{
-    color: var(--accent);
-}
-
-
 .social-link:hover {
     background-color: black;
     border-color: #ff0836;
     color: white;
+}
 
-    .icon {
-        color: white !important;
-    }
+.social-link-work{
+    background-color: #9e91b9;
+    border-color: #270b3d;
 }

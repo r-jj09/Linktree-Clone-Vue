@@ -1,5 +1,5 @@
 export default {
-    title: "Réka | Links 💜",
+    title: "Réka | Links ❤️",
     bio: "Hey! 👋 I’m Réka, a 24-year-old frontend dev in the making. Here’s where you can find me! 💜",
     social: {
         instagram: "Instagram",
@@ -8,5 +8,6 @@ export default {
         github: "GitHub",
         linkedin: "LinkedIn",
         goodreads: "Goodreads",
+        portfolio: "Portfolio",
     }
 };
