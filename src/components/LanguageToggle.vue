@@ -17,7 +17,9 @@ function toggleSwitcher() {
 
 <template>
   <nav class="lang-bar fixed z-[10]" :style="{ right: isOpen ? '0px' : '-150px' }">
-    <button class="handle flex items-center justify-items-center" @click="toggleSwitcher">
+    <button class="handle flex items-center justify-items-center" aria-label="Open language selector"
+            :aria-expanded="isOpen.toString()"
+            aria-controls="language-panel" @click="toggleSwitcher">
       <img class="size-full" src="/src/assets/icons/lang.svg" alt="">
     </button>
     <div class="lang-body">

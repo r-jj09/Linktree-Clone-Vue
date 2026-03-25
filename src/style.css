@@ -67,6 +67,33 @@ body {
 }
 
 .social-link-work{
-    background-color: #9e91b9;
-    border-color: #270b3d;
+    background-color: black;
+    border-color: #9e91b9;
+    color: white;
 }
+.social-link-work::after{
+    content: "";
+    background-image: url(assets/arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease-in-out 0.3s;
+}
+
+.social-link-work:hover {
+    background-color: black;
+    border-color: #ff0836;
+    color: white;
+}
+
+.social-link-work:hover::after {
+    width: 25px;
+    height: 25px;
+}
+
+

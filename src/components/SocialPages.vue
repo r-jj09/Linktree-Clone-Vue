@@ -87,6 +87,7 @@ onBeforeUnmount(() => {
       <img
           v-if="socialIcons[link.id]"
           :src="socialIcons[link.id]"
+          :alt="`${m.social?.[link.id] ?? link.id} icon`"
           class="icon w-[30px] h-[30px]"
       />
       {{ m.social?.[link.id] ?? link.id }}
@@ -106,6 +107,7 @@ onBeforeUnmount(() => {
       <img
           v-if="socialIcons[link.id]"
           :src="socialIcons[link.id]"
+          :alt="`${m.social?.[link.id] ?? link.id} icon`"
           class="icon w-[30px] h-[30px]"
       />
       {{ m.social?.[link.id] ?? link.id }}
