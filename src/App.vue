@@ -6,6 +6,8 @@ import LanguageToggle from "./components/LanguageToggle.vue";
 import { useLang } from "./composables/useLang";
 import Typed from "typed.js";
 
+import { Analytics } from '@vercel/analytics/vue';
+
 const { lang, messages: m } = useLang();
 
 const updateTitle = () => {
@@ -40,6 +42,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="page">
+    <Analytics />
     <ParticlesBackground/>
     <section class="page-content flex justify-center items-center flex-col">
       <img class="rounded-full w-[120px] h-[120px]" src="./assets/profile.webp" alt="Réka's profile picture">
