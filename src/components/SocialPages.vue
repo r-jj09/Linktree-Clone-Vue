@@ -78,6 +78,7 @@ onBeforeUnmount(() => {
         v-for="(link, i) in personalLinks"
         :key="link.id"
         :href="link.url"
+        :aria-label="`${m.social?.[link.id] ?? link.id} (opens in a new tab)`"
         target="_blank"
         rel="noopener noreferrer"
         class="social-link flex justify-center items-center flex-row gap-3 text-xl w-full p-4"
@@ -86,16 +87,17 @@ onBeforeUnmount(() => {
       <img
           v-if="socialIcons[link.id]"
           :src="socialIcons[link.id]"
-          :alt="`${m.social?.[link.id] ?? link.id} icon`"
           class="icon w-[30px] h-[30px]"
       />
       {{ m.social?.[link.id] ?? link.id }}
     </a>
-  </div><div class="social-container flex items-start justify-items-start flex-col md:flex-row w-full md:w-[80%] p-6 gap-3">
+  </div>
+  <div class="social-container flex items-start justify-items-start flex-col md:flex-row w-full md:w-[80%] p-6 gap-3">
     <a
         v-for="(link, i) in workLinks"
         :key="link.id"
         :href="link.url"
+        :aria-label="`${m.social?.[link.id] ?? link.id} (opens in a new tab)`"
         target="_blank"
         rel="noopener noreferrer"
         class="social-link social-link-work flex justify-center items-center flex-row gap-3 text-xl w-full py-12"
@@ -104,7 +106,6 @@ onBeforeUnmount(() => {
       <img
           v-if="socialIcons[link.id]"
           :src="socialIcons[link.id]"
-          :alt="`${m.social?.[link.id] ?? link.id} icon`"
           class="icon w-[30px] h-[30px]"
       />
       {{ m.social?.[link.id] ?? link.id }}

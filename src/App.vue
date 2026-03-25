@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
   <div class="page">
     <ParticlesBackground/>
     <section class="page-content flex justify-center items-center flex-col">
-      <img class="rounded-full w-[120px]" src="./assets/profile.webp" alt="">
+      <img class="rounded-full w-[120px] h-[120px]" src="./assets/profile.webp" alt="Réka's profile picture">
 
       <div class="flex flex-row text-2xl p-4">
         <span ref="typedEl"></span>
