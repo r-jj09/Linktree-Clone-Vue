@@ -74,10 +74,20 @@ function toggleSwitcher() {
   flex-direction: row;
 }
 
+.lang-toggle button {
+  color: var(--muted-2);
+  font-weight: 700;
+}
+
+.lang-toggle button.active {
+  color: var(--accent);
+}
+
 .handle {
-  border: none;
+  border: 2px solid var(--accent);
+  border-right: none;
   align-content: center;
-  background-color: var(--accent);
+  background-color: var(--panel);
   padding: 5px;
   height: 35px;
   width: 45px;
@@ -91,7 +101,7 @@ function toggleSwitcher() {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(158, 145, 185, 0.5);
+  background-color: var(--panel);
   padding: 10px;
   border-bottom-left-radius: 5px;
 }
@@ -123,6 +133,10 @@ function toggleSwitcher() {
   background: white;
   border-radius: 50%;
   transition: transform 0.2s ease;
+}
+
+input:checked + .slider {
+  background: var(--accent);
 }
 
 input:checked + .slider::before {

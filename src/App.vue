@@ -1,79 +1,60 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch } from "vue";
-import SocialPages from "./components/SocialPages.vue";
-import ParticlesBackground from "./components/ParticlesBackground.vue";
+import { onMounted, watch } from "vue";
+import ProfileHeader from "./components/ProfileHeader.vue";
+import ChatThread from "./components/ChatThread.vue";
+import ChatComposer from "./components/ChatComposer.vue";
 import LanguageToggle from "./components/LanguageToggle.vue";
 import { useLang } from "./composables/useLang";
-import Typed from "typed.js";
 
 
 const { lang, messages: m } = useLang();
 
-const updateTitle = () => {
-  document.title = m.value.title;
+const setMeta = (selector, content) => {
+  document.head.querySelector(selector)?.setAttribute("content", content);
 };
 
-onMounted(updateTitle);
+// Keep the document language, title and meta tags in step with the language toggle
+const updateHead = () => {
+  const meta = m.value.meta;
+  document.documentElement.lang = lang.value;
+  document.title = m.value.title;
+  setMeta('meta[name="description"]', meta.description);
+  setMeta('meta[name="author"]', m.value.name);
+  setMeta('meta[property="og:title"]', meta.title);
+  setMeta('meta[property="og:description"]', meta.shortDescription);
+  setMeta('meta[property="og:locale"]', meta.locale);
+  setMeta('meta[property="og:locale:alternate"]', lang.value === "hu" ? "en_US" : "hu_HU");
+  setMeta('meta[name="twitter:title"]', meta.title);
+  setMeta('meta[name="twitter:description"]', meta.shortDescription);
+};
 
-watch(lang, updateTitle);
+onMounted(updateHead);
 
-const typedEl = ref(null);
-let typedInstance;
-
-onMounted(() => {
-  if (!typedEl.value) return;
-
-  typedInstance = new Typed(typedEl.value, {
-    strings: ["@r_jj.09", "Réka", "Réjj"],
-    typeSpeed: 50,
-    backSpeed: 50,
-    smartBackspace: true,
-    loop: true,
-    showCursor: true,
-    cursorChar: "|",
-  });
-});
-
-onBeforeUnmount(() => {
-  typedInstance?.destroy();
-});
+watch(lang, updateHead);
 </script>
 
 <template>
   <div class="page">
-    <ParticlesBackground/>
-    <section class="page-content flex justify-center items-center flex-col">
-      <img class="rounded-full w-[120px] h-[120px]" src="./assets/profile.webp" alt="Réka's profile picture">
-
-      <div class="flex flex-row text-2xl p-4">
-        <span ref="typedEl"></span>
-      </div>
-      <LanguageToggle />
-      <p>{{ m.bio }}</p>
-
-
-      <div class="introduction-container">
-        <div class="profile-img-container">
-          <img src="" alt="" />
-        </div>
-        <div class="introduction-text"></div>
-      </div>
-      <SocialPages />
-    </section>
+    <LanguageToggle />
+    <div class="frame">
+      <ProfileHeader />
+      <ChatThread />
+      <ChatComposer />
+    </div>
   </div>
 </template>
 
 <style scoped>
 .page {
-  position: relative;
   min-height: 100vh;
-  overflow: hidden; /* ok here, because content is inside and still visible */
+  display: flex;
+  justify-content: center;
+  background: var(--bg);
 }
 
-.page-content {
-  position: relative;
-  z-index: 1;
-  padding: 2rem;
+.frame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>
-
