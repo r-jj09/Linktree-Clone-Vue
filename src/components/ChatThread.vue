@@ -141,9 +141,9 @@ function slash(event, link) {
         <div class="typing-bubble">
           <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
         </div>
-        <svg class="end-paw" viewBox="-11 -13 22 24" fill="var(--bubble-border)">
-          <PawPrint />
-        </svg>
+        <!--        <svg class="end-paw" viewBox="-11 -13 22 24" fill="var(&#45;&#45;bubble-border)">
+                  <PawPrint />
+                </svg>-->
       </div>
     </div>
   </div>
@@ -234,8 +234,9 @@ function slash(event, link) {
   background: var(--bubble);
   border: 2px solid var(--bubble-border);
   color: var(--text);
+  font-family: var(--font-marker);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.3;
 }
 
@@ -244,16 +245,16 @@ function slash(event, link) {
   overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-height: 60px;
-  padding: 0 22px 0 12px;
-  border-radius: 30px 30px 30px 4px;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 18px 0 9px;
+  border-radius: 25px 25px 25px 4px;
   background: var(--accent);
-  box-shadow: 5px 5px 0 var(--accent-shadow);
+  box-shadow: 4px 4px 0 var(--accent-shadow);
   color: var(--ink);
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 26px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -272,8 +273,8 @@ function slash(event, link) {
 }
 
 .link-icon {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   flex: none;
   border-radius: 50%;
   background: var(--ink);
@@ -285,8 +286,8 @@ function slash(event, link) {
 
 .icon-glyph {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   /* the icon files are single-colour, so they are used as a mask and tinted with the accent */
   background: var(--accent);
   -webkit-mask: var(--icon) center / contain no-repeat;
@@ -373,22 +374,22 @@ function slash(event, link) {
   }
 
   .link-bubble {
-    gap: 14px;
-    min-height: 68px;
-    padding: 0 30px 0 14px;
-    border-radius: 34px 34px 34px 4px;
-    box-shadow: 7px 7px 0 var(--accent-shadow);
-    font-size: 32px;
+    gap: 12px;
+    min-height: 58px;
+    padding: 0 24px 0 11px;
+    border-radius: 29px 29px 29px 4px;
+    box-shadow: 6px 6px 0 var(--accent-shadow);
+    font-size: 22px;
   }
 
   .link-icon {
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
   }
 
   .icon-glyph {
-    width: 22px;
-    height: 22px;
+    width: 19px;
+    height: 19px;
   }
 }
 

@@ -88,7 +88,7 @@ const stars = [
   position: absolute;
   z-index: -1;
   top: 14px;
-  right: 8px;
+  right: 2px;
   width: 60px;
   height: 60px;
   fill: var(--text);
@@ -97,18 +97,19 @@ const stars = [
 
 .name {
   margin: 0;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 38px;
-  line-height: 0.95;
-  letter-spacing: 0.01em;
+  font-family: var(--font-marker);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text);
 }
 
 .role {
   font-size: 13px;
-  font-weight: 700;
+  font-family: var(--font-marker);
+  font-weight: 400;
   color: var(--muted-2);
 }
 
@@ -126,7 +127,7 @@ const stars = [
   }
 
   .name {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .role {
